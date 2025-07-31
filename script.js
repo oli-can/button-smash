@@ -13,7 +13,7 @@ document.addEventListener('keydown', (e) => {
       score1El.textContent = score1;
       checkWin();
     } else if (e.key.toLowerCase() === 'l') {
-      score2+=2;
+      score2 += 2;
       score2El.textContent = score2;
       checkWin();
     }
