@@ -31,7 +31,17 @@ function checkWin() {
 function showWinner(message) {
   winnerEl.textContent = message;
   winnerEl.classList.remove('hidden');
+
+  // Play raccoon chitter sound
+  const chitter = document.getElementById('raccoon-chitter');
+  if (chitter) {
+    chitter.currentTime = 0;
+    chitter.play();
+  }
+  // Launch confetti
+  raccoonConfetti();
 }
+
 
 function raccoonConfetti() {
   const confettiCount = 30;
