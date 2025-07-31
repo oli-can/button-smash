@@ -13,7 +13,7 @@ document.addEventListener('keydown', (e) => {
       score1El.textContent = score1;
       checkWin();
     } else if (e.key.toLowerCase() === 'l') {
-      score2 += 2;
+      score2++;
       score2El.textContent = score2;
       checkWin();
     }
@@ -22,9 +22,9 @@ document.addEventListener('keydown', (e) => {
 
 function checkWin() {
   if (score1 >= maxScore) {
-    showWinner('Player 1 🅰️ wins!');
+    showWinner('Sharacoon wins!');
   } else if (score2 >= maxScore) {
-    showWinner('Player 2 🇱 wins!');
+    showWinner('Olicoon wins!');
   }
 }
 
@@ -52,8 +52,8 @@ function raccoonConfetti() {
     confetti.style.zIndex = 9999;
     confetti.style.fontSize = `${Math.random() * 35 + 30}px`; // larger size
     confetti.style.left = `${Math.random() * window.innerWidth}px`;
-    confetti.style.top = `${-500 - Math.random() * 200}px`; 
-    confetti.style.opacity = 0;
+    confetti.style.top = `${-100 - Math.random() * 200}px`; 
+    confetti.style.opacity = 2;
     confetti.style.transition = 'transform 2s ease-out, opacity 2s ease-out';
     confetti.style.filter = 'contrast(150%) brightness(120%)'; // boost visibility
 
