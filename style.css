@@ -1,13 +1,22 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  background: linear-gradient(135deg, #1c1f23 0%, #3a3f44 70%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
   color: #ddd;
   margin: 0;
   padding: 2rem;
   position: relative;
   overflow-x: hidden;
+
+  /* layered background:
+     1) dark gradient overlay for mood
+     2) raccoon silhouette image with low opacity
+     3) forest/night photo */
+  background:
+    linear-gradient(135deg, #1c1f23cc 0%, #3a3f44cc 70%),
+    url('https://i.imgur.com/EoQJGmz.png') no-repeat center bottom / 300px auto,
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
 }
+
 
 /* Add subtle glowing moonlight effect */
 body::before {
