@@ -44,7 +44,7 @@ function showWinner(message) {
 
 
 function raccoonConfetti() {
-  const confettiCount = 600;
+  const confettiCount = 100;
   for (let i = 0; i < confettiCount; i++) {
     const confetti = document.createElement('div');
     confetti.textContent = '🐾';
@@ -54,9 +54,9 @@ function raccoonConfetti() {
     confetti.style.left = `${Math.random() * window.innerWidth}px`;
 
     // Randomize starting vertical position between -100px and 0 (above the viewport)
-    confetti.style.top = `${-100 - Math.random() * 200}px`; 
+    confetti.style.top = `${-500 - Math.random() * 200}px`; 
 
-    confetti.style.opacity = 1;
+    confetti.style.opacity = 0;
     confetti.style.transition = 'transform 2s ease-out, opacity 2s ease-out';
 
     document.body.appendChild(confetti);
@@ -68,7 +68,7 @@ function raccoonConfetti() {
 
     setTimeout(() => {
       confetti.remove();
-    }, 2000);
+    }, 8000);
   }
 }
 
