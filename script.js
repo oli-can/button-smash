@@ -44,29 +44,31 @@ function showWinner(message) {
 
 
 function raccoonConfetti() {
-  const confettiCount = 30;
+  const confettiCount = 600;
   for (let i = 0; i < confettiCount; i++) {
     const confetti = document.createElement('div');
-    confetti.textContent = '🐾'; // raccoon paw print emoji
+    confetti.textContent = '🐾';
     confetti.style.position = 'fixed';
     confetti.style.zIndex = 9999;
-    confetti.style.fontSize = `${Math.random() * 20 + 10}px`;
+    confetti.style.fontSize = `${Math.random() * 25 + 15}px`;
     confetti.style.left = `${Math.random() * window.innerWidth}px`;
-    confetti.style.top = `-20px`;
+
+    // Randomize starting vertical position between -100px and 0 (above the viewport)
+    confetti.style.top = `${-100 - Math.random() * 200}px`; 
+
     confetti.style.opacity = 1;
     confetti.style.transition = 'transform 2s ease-out, opacity 2s ease-out';
 
     document.body.appendChild(confetti);
 
-    // Animate falling + random horizontal drift
     requestAnimationFrame(() => {
-      confetti.style.transform = `translate(${(Math.random() - 0.5) * 200}px, ${window.innerHeight + 40}px) rotate(${Math.random() * 360}deg)`;
+      confetti.style.transform = `translate(${(Math.random() - 0.5) * 300}px, ${window.innerHeight + 40}px) rotate(${Math.random() * 720}deg)`;
       confetti.style.opacity = 0;
     });
 
-    // Remove confetti after animation
     setTimeout(() => {
       confetti.remove();
     }, 2000);
   }
 }
+
