@@ -50,19 +50,17 @@ function raccoonConfetti() {
     confetti.textContent = '🐾';
     confetti.style.position = 'fixed';
     confetti.style.zIndex = 9999;
-    confetti.style.fontSize = `${Math.random() * 25 + 15}px`;
+    confetti.style.fontSize = `${Math.random() * 35 + 30}px`; // larger size
     confetti.style.left = `${Math.random() * window.innerWidth}px`;
-
-    // Randomize starting vertical position between -100px and 0 (above the viewport)
     confetti.style.top = `${-500 - Math.random() * 200}px`; 
-
     confetti.style.opacity = 0;
     confetti.style.transition = 'transform 2s ease-out, opacity 2s ease-out';
+    confetti.style.filter = 'contrast(150%) brightness(120%)'; // boost visibility
 
     document.body.appendChild(confetti);
 
     requestAnimationFrame(() => {
-      confetti.style.transform = `translate(${(Math.random() - 0.5) * 300}px, ${window.innerHeight + 40}px) rotate(${Math.random() * 720}deg)`;
+      confetti.style.transform = `translate(${(Math.random() - 0.5) * 600}px, ${window.innerHeight + 40}px) rotate(${Math.random() * 720}deg)`; // more spread
       confetti.style.opacity = 0;
     });
 
