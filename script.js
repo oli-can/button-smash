@@ -1,6 +1,6 @@
 let score1 = 0;
 let score2 = 0;
-const maxScore = 100;
+const maxScore = 30;
 
 const score1El = document.getElementById('score1');
 const score2El = document.getElementById('score2');
@@ -13,7 +13,7 @@ document.addEventListener('keydown', (e) => {
       score1El.textContent = score1;
       checkWin();
     } else if (e.key.toLowerCase() === 'l') {
-      score2+2;
+      score2+=2;
       score2El.textContent = score2;
       checkWin();
     }
