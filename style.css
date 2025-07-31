@@ -9,7 +9,6 @@ body {
 
   background:
     linear-gradient(135deg, #1c1f23cc 0%, #3a3f44cc 70%),
-    url('https://i.imgur.com/ybP8GqH.png') no-repeat bottom right / 250px auto,
     url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
 }
 
